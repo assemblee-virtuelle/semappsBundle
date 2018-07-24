@@ -15,7 +15,7 @@ class ImportManager
 {
     /** @var  $sfClient \VirtualAssembly\SemanticFormsBundle\Services\SemanticFormsClient  */
     private $sfClient;
-    /** @var \semappsBundle\Services\SparqlRepository $sparqlRepository */
+    /** @var \VirtualAssembly\semappsBundle\Services\SparqlRepository $sparqlRepository */
     private $sparqlRepository;
 
     public function __construct(SemanticFormsClient $sfClient,SparqlRepository $sparqlRepository)

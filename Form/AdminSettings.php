@@ -68,7 +68,7 @@ class AdminSettings extends AbstractType
     {
         $resolver->setDefaults(
             array(
-                'data_class' => 'semappsBundle\Entity\User',
+                'data_class' => 'VirtualAssembly\semappsBundle\Entity\User',
             )
         );
     }

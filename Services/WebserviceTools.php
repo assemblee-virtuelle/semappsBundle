@@ -10,8 +10,8 @@ namespace VirtualAssembly\semappsBundle\Services;
 
 
 use Knp\Bundle\MarkdownBundle\MarkdownParserInterface;
-use semappsBundle\Entity\User;
-use semappsBundle\coreConfig;
+use VirtualAssembly\semappsBundle\Entity\User;
+use VirtualAssembly\semappsBundle\coreConfig;
 use VirtualAssembly\SemanticFormsBundle\Services\SemanticFormsClient;
 use VirtualAssembly\SparqlBundle\Services\SparqlClient;
 use Doctrine\ORM\EntityManager;

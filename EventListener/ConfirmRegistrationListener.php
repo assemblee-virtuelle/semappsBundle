@@ -5,7 +5,7 @@ namespace VirtualAssembly\semappsBundle\EventListener;
 use Doctrine\ORM\EntityManager;
 use FOS\UserBundle\Event\GetResponseUserEvent;
 use FOS\UserBundle\FOSUserEvents;
-use semappsBundle\Services\Encryption;
+use VirtualAssembly\semappsBundle\Services\Encryption;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;

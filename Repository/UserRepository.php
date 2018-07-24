@@ -3,7 +3,7 @@
 namespace VirtualAssembly\semappsBundle\Repository;
 
 use FOS\UserBundle\Model\UserInterface;
-use \semappsBundle\Entity\User;
+use \VirtualAssembly\semappsBundle\Entity\User;
 
 /**
  * UserRepository

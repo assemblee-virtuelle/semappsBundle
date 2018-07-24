@@ -8,7 +8,7 @@
  */
 namespace VirtualAssembly\semappsBundle\Services;
 use Symfony\Component\Templating\EngineInterface;
-use semappsBundle\Entity\User;
+use VirtualAssembly\semappsBundle\Entity\User;
 /**
  * E-mail Parameters
  */

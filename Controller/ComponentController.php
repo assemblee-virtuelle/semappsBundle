@@ -2,7 +2,7 @@
 
 namespace VirtualAssembly\semappsBundle\Controller;
 
-use semappsBundle\Form\ImportType;
+use VirtualAssembly\semappsBundle\Form\ImportType;
 use Symfony\Component\HttpFoundation\Request;
 
 class ComponentController extends AbstractMultipleComponentController

@@ -2,11 +2,11 @@
 
 namespace VirtualAssembly\semappsBundle\Controller;
 
-use semappsBundle\Entity\User;
-use semappsBundle\Services\WebserviceCache;
-use semappsBundle\Services\WebserviceTools;
+use VirtualAssembly\semappsBundle\Entity\User;
+use VirtualAssembly\semappsBundle\Services\WebserviceCache;
+use VirtualAssembly\semappsBundle\Services\WebserviceTools;
 use VirtualAssembly\SparqlBundle\Services\SparqlClient;
-use semappsBundle\coreConfig;
+use VirtualAssembly\semappsBundle\coreConfig;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class WebserviceController
- * @package semappsBundle\Controller
+ * @package VirtualAssembly\semappsBundle\Controller
  * @see WebserviceTools
  * utilisé par polymer principalement
  */

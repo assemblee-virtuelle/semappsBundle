@@ -1,7 +1,7 @@
-semappsBundle\Entity\User:
+VirtualAssembly\semappsBundle\Entity\User:
     type: entity
     table: null
-    repositoryClass: semappsBundle\Repository\UserRepository
+    repositoryClass: VirtualAssembly\semappsBundle\Repository\UserRepository
     id:
         id:
             type: integer

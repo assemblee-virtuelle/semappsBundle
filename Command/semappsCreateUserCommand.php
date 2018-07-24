@@ -2,7 +2,7 @@
 
 namespace VirtualAssembly\semappsBundle\Command;
 
-use semappsBundle\Entity\User;
+use VirtualAssembly\semappsBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -84,7 +84,7 @@ class semappsCreateUserCommand extends ContainerAwareCommand
         $mailer = $this->getContainer()->get(
             'semapps_bundle.event_listener.send_mail'
         );
-        /** @var \semappsBundle\Services\Encryption $encryption */
+        /** @var \VirtualAssembly\semappsBundle\Services\Encryption $encryption */
         $encryption = $this->getContainer()->get('semapps_bundle.encryption');
         $user         = new User();
 

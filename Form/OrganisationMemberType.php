@@ -2,8 +2,8 @@
 
 namespace VirtualAssembly\semappsBundle\Form;
 
-use semappsBundle\Form\Type\YesNoType;
-use semappsBundle\coreConfig;
+use VirtualAssembly\semappsBundle\Form\Type\YesNoType;
+use VirtualAssembly\semappsBundle\coreConfig;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -61,7 +61,7 @@ class OrganisationMemberType extends AbstractType
     {
         $resolver->setDefaults(
             array(
-                'data_class' => 'semappsBundle\Entity\Organization',
+                'data_class' => 'VirtualAssembly\semappsBundle\Entity\Organization',
             )
         );
     }

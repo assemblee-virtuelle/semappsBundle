@@ -3,8 +3,8 @@
 namespace VirtualAssembly\semappsBundle\Controller;
 
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
-use semappsBundle\Entity\User;
-use semappsBundle\Form\UserType;
+use VirtualAssembly\semappsBundle\Entity\User;
+use VirtualAssembly\semappsBundle\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;

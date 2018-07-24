@@ -9,7 +9,7 @@
 namespace VirtualAssembly\semappsBundle\Form;
 
 use Doctrine\ORM\EntityRepository;
-use semappsBundle\Form\Type\YesNoType;
+use VirtualAssembly\semappsBundle\Form\Type\YesNoType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
@@ -61,7 +61,7 @@ class RegisterType extends AbstractType
     {
         $resolver->setDefaults(
             array(
-                'data_class' => 'semappsBundle\Entity\User',
+                'data_class' => 'VirtualAssembly\semappsBundle\Entity\User',
             )
         );
     }

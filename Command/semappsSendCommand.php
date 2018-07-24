@@ -82,7 +82,7 @@ class semappsSendCommand extends ContainerAwareCommand
 
         $userRepository         = $em->getRepository('semappsBundle:User');
 
-        /** @var \semappsBundle\Entity\User $user */
+        /** @var \VirtualAssembly\semappsBundle\Entity\User $user */
         $user = $userRepository->find($id);
 
         $url = $this->getContainer()->get('router')->generate(

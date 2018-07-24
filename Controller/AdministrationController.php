@@ -3,12 +3,12 @@
 namespace VirtualAssembly\semappsBundle\Controller;
 
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
-use semappsBundle\Form\RegisterType;
-use semappsBundle\Repository\UserRepository;
-use semappsBundle\Form\AdminSettings;
-use semappsBundle\Services\ContextManager;
-use semappsBundle\Services\InviteManager;
-use semappsBundle\Services\Mailer;
+use VirtualAssembly\semappsBundle\Form\RegisterType;
+use VirtualAssembly\semappsBundle\Repository\UserRepository;
+use VirtualAssembly\semappsBundle\Form\AdminSettings;
+use VirtualAssembly\semappsBundle\Services\ContextManager;
+use VirtualAssembly\semappsBundle\Services\InviteManager;
+use VirtualAssembly\semappsBundle\Services\Mailer;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;

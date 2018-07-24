@@ -3,7 +3,7 @@
 namespace VirtualAssembly\semappsBundle\Controller;
 
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
-use semappsBundle\Form\ImportType;
+use VirtualAssembly\semappsBundle\Form\ImportType;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
 

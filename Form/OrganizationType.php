@@ -2,7 +2,7 @@
 
 namespace VirtualAssembly\semappsBundle\Form;
 
-use semappsBundle\coreConfig;
+use VirtualAssembly\semappsBundle\coreConfig;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
