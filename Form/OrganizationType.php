@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\Form;
+namespace VirtualAssembly\semappsBundle\Form;
 
 use semappsBundle\coreConfig;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;

@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\Command;
+namespace VirtualAssembly\semappsBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;

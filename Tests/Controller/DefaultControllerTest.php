@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\Tests\Controller;
+namespace VirtualAssembly\semappsBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

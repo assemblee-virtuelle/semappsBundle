@@ -6,7 +6,7 @@
  * Time: 11:25
  */
 
-namespace semappsBundle\Services;
+namespace VirtualAssembly\semappsBundle\Services;
 
 
 use VirtualAssembly\SemanticFormsBundle\Services\SemanticFormsClient;

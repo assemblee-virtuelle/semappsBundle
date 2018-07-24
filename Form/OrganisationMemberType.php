@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\Form;
+namespace VirtualAssembly\semappsBundle\Form;
 
 use semappsBundle\Form\Type\YesNoType;
 use semappsBundle\coreConfig;

@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\DependencyInjection;
+namespace VirtualAssembly\semappsBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

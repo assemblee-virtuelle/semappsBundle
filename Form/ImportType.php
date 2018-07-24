@@ -6,7 +6,7 @@
  * Time: 11:02
  */
 
-namespace semappsBundle\Form;
+namespace VirtualAssembly\semappsBundle\Form;
 
 
 use Symfony\Component\Form\AbstractType;

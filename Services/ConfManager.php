@@ -6,7 +6,7 @@
  * Time: 11:48
  */
 
-namespace semappsBundle\Services;
+namespace VirtualAssembly\semappsBundle\Services;
 
 
 use Symfony\Component\DependencyInjection\ContainerInterface as Container;

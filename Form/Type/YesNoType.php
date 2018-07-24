@@ -6,7 +6,7 @@
  * Time: 10:43
  */
 
-namespace semappsBundle\Form\Type;
+namespace VirtualAssembly\semappsBundle\Form\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;

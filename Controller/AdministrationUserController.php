@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\Controller;
+namespace VirtualAssembly\semappsBundle\Controller;
 
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use semappsBundle\Entity\User;

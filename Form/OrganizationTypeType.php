@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\Form;
+namespace VirtualAssembly\semappsBundle\Form;
 
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;

@@ -6,7 +6,7 @@
  * Time: 10:14
  */
 
-namespace semappsBundle\Form;
+namespace VirtualAssembly\semappsBundle\Form;
 
 use Doctrine\ORM\EntityRepository;
 use semappsBundle\Form\Type\YesNoType;

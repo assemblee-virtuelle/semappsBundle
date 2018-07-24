@@ -6,7 +6,7 @@
  * Time: 16:47
  */
 
-namespace semappsBundle\Services;
+namespace VirtualAssembly\semappsBundle\Services;
 
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;

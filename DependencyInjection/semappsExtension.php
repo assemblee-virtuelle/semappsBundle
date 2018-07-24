@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\DependencyInjection;
+namespace VirtualAssembly\semappsBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

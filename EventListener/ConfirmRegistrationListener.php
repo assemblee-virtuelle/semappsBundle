@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\EventListener;
+namespace VirtualAssembly\semappsBundle\EventListener;
 
 use Doctrine\ORM\EntityManager;
 use FOS\UserBundle\Event\GetResponseUserEvent;

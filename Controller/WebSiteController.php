@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\Controller;
+namespace VirtualAssembly\semappsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 

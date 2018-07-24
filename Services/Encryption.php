@@ -6,7 +6,7 @@
  * Time: 10:10
  */
 
-namespace semappsBundle\Services;
+namespace VirtualAssembly\semappsBundle\Services;
 
 
 class Encryption

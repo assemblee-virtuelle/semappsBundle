@@ -6,7 +6,7 @@
  * Time: 10:03
  */
 
-namespace semappsBundle\Services;
+namespace VirtualAssembly\semappsBundle\Services;
 
 
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;

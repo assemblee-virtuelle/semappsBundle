@@ -6,7 +6,7 @@
  * Time: 18:27
  */
 
-namespace semappsBundle\Controller;
+namespace VirtualAssembly\semappsBundle\Controller;
 
 
 abstract class UniqueComponentController extends AbstractComponentController

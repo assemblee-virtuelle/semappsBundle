@@ -6,7 +6,7 @@
  * Time: 16:47
  */
 
-namespace semappsBundle\Services;
+namespace VirtualAssembly\semappsBundle\Services;
 
 use FOS\UserBundle\Util\TokenGenerator;
 use GuzzleHttp\Client;

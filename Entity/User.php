@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\Entity;
+namespace VirtualAssembly\semappsBundle\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 /**
  * User

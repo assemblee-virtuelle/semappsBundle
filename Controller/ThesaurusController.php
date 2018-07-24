@@ -6,7 +6,7 @@
  * Time: 14:45
  */
 
-namespace semappsBundle\Controller;
+namespace VirtualAssembly\semappsBundle\Controller;
 
 
 use Symfony\Component\HttpFoundation\Request;

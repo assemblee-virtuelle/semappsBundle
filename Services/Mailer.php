@@ -6,7 +6,7 @@
  * Date: 24/02/17
  * Time: 15:33
  */
-namespace semappsBundle\Services;
+namespace VirtualAssembly\semappsBundle\Services;
 use Symfony\Component\Templating\EngineInterface;
 use semappsBundle\Entity\User;
 /**

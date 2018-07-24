@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\Repository;
+namespace VirtualAssembly\semappsBundle\Repository;
 
 use FOS\UserBundle\Model\UserInterface;
 use \semappsBundle\Entity\User;

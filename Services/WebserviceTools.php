@@ -6,7 +6,7 @@
  * Time: 10:14
  */
 
-namespace semappsBundle\Services;
+namespace VirtualAssembly\semappsBundle\Services;
 
 
 use Knp\Bundle\MarkdownBundle\MarkdownParserInterface;

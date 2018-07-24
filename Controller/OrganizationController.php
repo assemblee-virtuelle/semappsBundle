@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\Controller;
+namespace VirtualAssembly\semappsBundle\Controller;
 
 use semappsBundle\Form\ImportType;
 use Symfony\Component\HttpFoundation\Request;

@@ -1,6 +1,6 @@
 <?php
 
-namespace semappsBundle\Command;
+namespace VirtualAssembly\semappsBundle\Command;
 
 use semappsBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
