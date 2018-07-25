@@ -6,7 +6,6 @@ use VirtualAssembly\semappsBundle\Entity\User;
 use VirtualAssembly\semappsBundle\Services\WebserviceCache;
 use VirtualAssembly\semappsBundle\Services\WebserviceTools;
 use VirtualAssembly\SparqlBundle\Services\SparqlClient;
-use VirtualAssembly\semappsBundle\coreConfig;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,6 +30,7 @@ class WebserviceController extends Controller
      */
     public function parametersAction()
     {
+        $defaultTypes = $this->container->getParameter('semapps.default_types');
         $cache = new FilesystemAdapter();
         $parameters = $cache->getItem('gv.webservice.parameters');
         $webserviceTools       = $this->get('semapps_bundle.webservice_tools');
@@ -42,7 +42,7 @@ class WebserviceController extends Controller
         // Get results.
         $results = $webserviceTools->searchSparqlRequest(
             '',
-            coreConfig::URI_SKOS_THESAURUS,
+            $defaultTypes['thesaurus'],
             null,
             false,
             $thematicConf['graphuri']
@@ -79,8 +79,7 @@ class WebserviceController extends Controller
                 'typeToName'      => $this->getParameter("typeToName"),
                 'graphToName'      => $this->getParameter("graphToName"),
                 'thesaurus'     => $thesaurus,
-                'buildings'     => [],
-//                'buildings'     => coreConfig::$buildings,
+                'buildings'     => []
             ];
         }
 

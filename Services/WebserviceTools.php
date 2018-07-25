@@ -48,7 +48,7 @@ class WebserviceTools
         $this->parser = $parser;
         $this->sparqlRepository = $sparqlRepository;
     }
-    public function searchSparqlRequest($term, $type = coreConfig::Multiple, $filter=null, $isBlocked = false,$graphUri = null)
+    public function searchSparqlRequest($term, $type = '', $filter=null, $isBlocked = false,$graphUri = null)
     {
 
         $arrayType = explode('|',$type);

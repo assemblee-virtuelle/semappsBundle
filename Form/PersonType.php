@@ -2,7 +2,6 @@
 
 namespace VirtualAssembly\semappsBundle\Form;
 
-use VirtualAssembly\semappsBundle\coreConfig;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;

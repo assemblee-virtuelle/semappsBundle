@@ -25,5 +25,7 @@ class semappsExtension extends Extension
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
 
+        $container->setParameter( 'semapps.default_types', $config['default_types'] );
+        $container->setParameter( 'semapps.ontology_types', $config['ontology_types'] );
     }
 }

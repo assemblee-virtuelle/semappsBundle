@@ -69,6 +69,6 @@ abstract class AbstractComponentController extends Controller
      * Récupère le nom du bundle dans la requête
      */
     protected function getBundleNameFromRequest($request){
-        return explode("\\",$request->attributes->get('_controller'))[0];
+        return explode("\\Controller",$request->attributes->get('_controller'))[0];
     }
 }
