@@ -32,7 +32,7 @@
                         loadParameters();
                     }
                     else {
-                        $.getJSON('/front/src/config.json', (data) => {
+                        $.getJSON('/bundles/semapps/front/src/config.json', (data) => {
                             this.entities = data;
                             this.start(response.responseJSON);
                         })
@@ -158,7 +158,7 @@
             "use strict";
             if (!path) {
                 if(semapps.entities.hasOwnProperty(key))
-                    return '/common/images/result-no_picture-' + semapps.entities[key].nameType + '.png';
+                    return '/bundles/semapps/common/images/result-no_picture-' + semapps.entities[key].nameType + '.png';
             }
             return path;
         }
