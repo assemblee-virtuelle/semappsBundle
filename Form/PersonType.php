@@ -21,13 +21,11 @@ use VirtualAssembly\SemanticFormsBundle\SemanticFormsBundle;
 class PersonType extends SemanticFormType
 {
 
-
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
         // This will manage form specification.
         parent::buildForm($builder, $options);
-
 
         $this
             ->add($builder, 'firstName', TextType::class)

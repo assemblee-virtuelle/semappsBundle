@@ -13,7 +13,7 @@ Polymer({
             semapps.initElementGlobals(this);
         });
         //log(this.route)
-        switch(this.type) {
+        switch(this.type) { //TODO: fix this
             case 'person':
             case 'persontype':
                 this.color = semapps.entities["http://virtual-assembly.org/pair#Person"].markerColor;

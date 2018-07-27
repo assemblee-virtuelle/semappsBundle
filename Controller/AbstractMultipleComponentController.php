@@ -35,8 +35,7 @@ abstract class AbstractMultipleComponentController extends AbstractComponentCont
         if($this->container->get('twig.loader')->exists('semappsBundle:'.ucfirst($componentName).':'.$componentName.'Form.html.twig')){
             $templateTwig = $bundleName.':'.ucfirst($componentName).':'.$componentName.'List.html.twig';
         }else{
-
-                $templateTwig = 'semappsBundle:Component:componentList.html.twig';
+            $templateTwig = 'semappsBundle:Component:componentList.html.twig';
         }
 
         //display

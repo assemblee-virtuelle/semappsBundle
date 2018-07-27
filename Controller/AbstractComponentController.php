@@ -28,8 +28,9 @@ abstract class AbstractComponentController extends Controller
         $bundleName = $this->getBundleNameFromRequest($request);
         //common
         $componentConf = $this->getParameter($componentName.'Conf');
+        $default_types = $this->container->getParameter('semapps.default_types');
+        $ontology_types = $this->container->getParameter('semapps.ontology_types');
 
-        //check if we impose the graph for the specific $componentName
         if(array_key_exists('graphuri',$componentConf) && $componentConf['graphuri'] != null)
             $graphURI = $componentConf['graphuri'];
         else
@@ -45,21 +46,27 @@ abstract class AbstractComponentController extends Controller
             'sfConf'               	=> $componentConf,
             'spec'                  => $componentConf['spec'],
             'values'                => $this->getSfLink($id),
-
+            'default_types'         => $default_types,
+            'ontology_types'        => $ontology_types
         ];
 
         // Same as FormType::class
-        $componentForm = $bundleName.'\Form\\'.ucfirst(
-                $componentName
-            ).'Type';
+        if ($componentName == 'person' || $componentName == 'organization'){
+            $componentForm = $bundleName.'\Form\\'.ucfirst($componentName).'Type';
+        } else {
+            $componentForm = $bundleName.'\Form\\'.'DefaultType';
+        }
+
         //common
         /** @var \VirtualAssembly\SemanticFormsBundle\Form\SemanticFormType $form */
+
         $form = $this->createForm(
             $componentForm,
             $this->getElement($id),
             // Options.
             $options
         );
+
         return $form;
     }
 

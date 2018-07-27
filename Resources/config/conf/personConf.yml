@@ -10,107 +10,187 @@ parameters:
         http://virtual-assembly.org/pair#isSubjectOf:
           value: 'subjectOfPAIR'
           access: 'anonymous'
-          type: 'uri'
+          type: 
+            - 'uri'
+          form: null
         http://virtual-assembly.org/pair#firstName:
           value: 'firstName'
           access: 'anonymous'
+          type: null
+          form:
+            required: true
+            languages:
+              fr: 'Prénom'
+              en: 'First name'
+            classType: 'text'
           otherPredicat:
             - http://xmlns.com/foaf/0.1/firstName
             - http://xmlns.com/foaf/0.1/givenName
         http://virtual-assembly.org/pair#lastName:
           value: 'lastName'
           access: 'anonymous'
+          type: null
+          form:
+            required: true
+            languages:
+              fr: 'Nom de famille'
+              en: 'Family name'
+            classType: 'text'
           otherPredicat:
             - http://xmlns.com/foaf/0.1/familyName
             - http://xmlns.com/foaf/0.1/lastName
         http://virtual-assembly.org/pair#alias:
           value: 'alias'
           access: 'anonymous'
-#        http://virtual-assembly.org/pair#isRepresentedBy:
-#          value: 'representedBy'
-#          access: 'anonymous'
+          type: null
+          form:
+            required: false
+            languages:
+              fr: 'Pseudo'
+              en: 'Pseudo'
+            classType: 'text'
         http://virtual-assembly.org/pair#description:
           value: 'description'
           access: 'anonymous'
+          type: null
+          form:
+            required: false
+            languages:
+              fr: 'Description'
+              en: 'Description'
+            classType: 'textarea'
         http://virtual-assembly.org/pair#comment:
           value: 'comment'
           access: 'anonymous'
+          type: null
+          form:
+            required: false
+            languages:
+              fr: 'Commentaire'
+              en: 'Comment'
+            classType: 'text'
         http://virtual-assembly.org/pair#homePage:
           value: 'homePage'
           access: 'anonymous'
+          type: null
+          form:
+            required: false
+            languages:
+              fr: 'Site web'
+              en: 'Website'
+            classType: 'multiple'
           otherPredicat:
             - http://xmlns.com/foaf/0.1/homepage
         http://virtual-assembly.org/pair#aboutPage:
           value: 'aboutPage'
           access: 'anonymous'
-#        http://virtual-assembly.org/pair#isLocatedAt:
-#          value: 'localizedBy'
-#          access: 'anonymous'
+          type: null
+          form:
+            required: false
+            languages:
+              fr: 'A propos'
+              en: 'About'
+            classType: 'url'
         http://virtual-assembly.org/pair#email:
           value: 'email'
           access: 'member'
+          type: null
+          form:
+            required: false
+            languages:
+              fr: 'Email'
+              en: 'Email'
+            classType: 'mail'
           otherPredicat:
             - http://xmlns.com/foaf/0.1/mbox
         http://virtual-assembly.org/pair#phone:
           value: 'phone'
           access: 'member'
+          type: null
+          form:
+            required: false
+            languages:
+              fr: 'Téléphone'
+              en: 'Phone'
+            classType: 'text'
           otherPredicat:
             - http://xmlns.com/foaf/0.1/phone
         http://virtual-assembly.org/pair#hasInterest:
           value: 'hasInterest'
           access: 'anonymous'
+          type: 
+            - 'thesaurus'
+          form:
+            required: false
+            languages:
+              fr: "Centres d'intérêts"
+              en: 'Interested in'
+            classType: 'uri'
         http://virtual-assembly.org/pair#hasKeyword:
           value: 'hasSubject'
           access: 'anonymous'
-          type: 'dbpedia'
+          type: null
           otherPredicat:
             - http://xmlns.com/foaf/0.1/topic_interest
         http://virtual-assembly.org/pair#knows:
           value: 'knows'
           access: 'anonymous'
-          type: 'uri'
+          type: 
+            - 'person'
+          form:
+            required: false
+            languages:
+              fr: "Connait"
+              en: "Knows"
+            classType: 'uri'
           otherPredicat:
             - http://xmlns.com/foaf/0.1/knows
         http://virtual-assembly.org/pair#isMemberOf:
           value: 'memberOf'
           access: 'anonymous'
-          type: 'uri'
+          type: 
+            - 'organization'
         http://virtual-assembly.org/pair#isResponsibleFor:
           value: 'responsibleOf'
           access: 'anonymous'
-          type: 'uri'
+          type: 
+            - 'organization'
         http://virtual-assembly.org/pair#isAffiliatedTo:
           value: 'affiliatedTo'
           access: 'anonymous'
-          type: 'uri'
+          type: 
+            - 'organization'
         http://virtual-assembly.org/pair#isInvolvedIn:
           value: 'involvedIn'
           access: 'anonymous'
-          type: 'uri'
+          type: 
+            - 'project'
+            - 'event'
         http://virtual-assembly.org/pair#manages:
           value: 'manages'
           access: 'anonymous'
-          type: 'uri'
+          type: 
+            - 'uri'
         http://virtual-assembly.org/pair#offers:
           value: 'offers'
           access: 'anonymous'
-          type: 'dbpedia'
+          type: 
+            - 'uri'
         http://virtual-assembly.org/pair#needs:
           value: 'needs'
           access: 'anonymous'
-          type: 'dbpedia'
+          type: 
+            - 'uri'
         http://virtual-assembly.org/pair#organizes:
           value: 'organizes'
           access: 'anonymous'
-          type: 'uri'
+          type: 
+            - 'uri'
         http://virtual-assembly.org/pair#isParticipatingIn:
           value: 'participantOf'
           access: 'anonymous'
-          type: 'uri'
-        http://virtual-assembly.org/pair#brainstorms:
-          value: 'brainstorms'
-          access: 'anonymous'
-          type: 'uri'
+          type: 
+            - 'uri'
         http://www.w3.org/1999/02/22-rdf-syntax-ns#type:
           value: 'type'
           access: 'anonymous'
@@ -122,11 +202,13 @@ parameters:
         http://virtual-assembly.org/pair#isEmployedBy:
           value: 'employedBy'
           access: 'anonymous'
-          type: 'uri'
+          type:
+            - 'uri'
         http://virtual-assembly.org/pair#isDocumentedBy:
           value: 'documentedBy'
           access: 'anonymous'
-          type: 'uri'
+          type: 
+            - 'uri'
         http://virtual-assembly.org/pair#adress:
           value: 'address'
           access: 'anonymous'
@@ -136,19 +218,23 @@ parameters:
         http://virtual-assembly.org/pair#isAuthorOfDocument:
           value: 'internal_author'
           access: 'anonymous'
-          type: 'uri'
+          type: 
+            - 'uri'
         http://virtual-assembly.org/pair#isContributorOfDocument:
           value: 'internal_contributor'
           access: 'anonymous'
-          type: 'uri'
+          type: 
+            - 'uri'
         http://virtual-assembly.org/pair#isPublisherOfDocument: #person + orga
            value: 'internal_publisher'
            access: 'anonymous'
-           type: 'uri'
+           type: 
+            - 'uri'
         http://virtual-assembly.org/pair#Skill: #person + orga
            value: 'skill'
            access: 'anonymous'
-           type: 'dbpedia'
+           type: 
+            - 'dbpedia'
 
       reverse:
         http://virtual-assembly.org/pair#knows: 'http://virtual-assembly.org/pair#knows'

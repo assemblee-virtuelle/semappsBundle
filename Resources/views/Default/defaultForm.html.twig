@@ -20,16 +20,9 @@
                 </li>
                 {% if sf_domain not in entityUri and app.user.id == currentUser.id%}
                     <li role="presentation" class="active pull-right">
-                        <a  href="{{ path('personActualizeComponent', {'uniqueComponentName':'person'}) }}"><span
+                        <a  href="{{ path('actualizeComponent', {'componentName':componentName, 'uri': entityUri|url_encode}) }}"><span
                                     class="glyphicon glyphicon-refresh"></span>
                             actualiser</a>
-                    </li>
-                {% endif %}
-                {% if app.user.id == currentUser.id %}
-                    <li role="presentation" class="user-remove-profile active pull-right" rel="{{ path('personRemoveComponent', {'uniqueComponentName':'person'}) }}">
-                        <a  href="#"><span
-                                    class=" glyphicon glyphicon-trash"></span>
-                            retirer</a>
                     </li>
                 {% endif %}
             </ul>
@@ -55,27 +48,14 @@
                             <a href="#" id="profilePicture" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="Cliquez ici pour télécharger une image (2Mo max !)">
                                 <img src="{{ asset(currentUser.pictureName == null ? 'common/images/no_avatar.png' : 'uploads/pictures/'~currentUser.pictureName) }}"/>
                                 <span id="profileEditPictureField">
-                                    
                         {{ form_widget(form.pictureName) }}
                     </span>
                             </a>
                         {% endif %}
                     </div>
                     <div class="col-sm-6">
-                        {% for field in form %}
-                        <div class="row">
-                            <div class="col-xs-6">
-                                {{ form_row(field) }}
-                            </div>
-                        </div>
 
-                        {% endfor %}
 
-                        <div class="row">
-                            <div class="col-xs-12">
-                                {{ form_row(form.save, {attr:{class:'btn btn-primary-lgv pull-right'}}) }}
-                            </div>
-                        </div>
                     </div>
                     {{ form_end(form) }}
                     {% if importForm is not null %}

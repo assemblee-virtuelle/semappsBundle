@@ -133,6 +133,7 @@ class PersonController extends UniqueComponentController
             }
         }
         // Fill form
+
         return $this->render(
             'semappsBundle:'.ucfirst($uniqueComponentName).':'.$uniqueComponentName.'Form.html.twig',[
                 'importForm'=> ($importForm != null)? $importForm->createView() : null,
