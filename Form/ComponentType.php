@@ -19,7 +19,7 @@ use VirtualAssembly\SemanticFormsBundle\Form\UriType;
 use VirtualAssembly\SemanticFormsBundle\SemanticFormsBundle;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class DefaultType extends SemanticFormType
+class ComponentType extends SemanticFormType
 {
 
     private $lang = 'fr';
@@ -36,7 +36,7 @@ class DefaultType extends SemanticFormType
         
         $combinedTypes = array_merge($this->default_types, $this->ontology_types);
         foreach ($options['sfConf']['fields'] as $key => $value) {
-            $rdfType = [];
+            $rdfType = "";
             $name = $value['value'];
 
             if (isset($value['form'])){
@@ -47,9 +47,15 @@ class DefaultType extends SemanticFormType
                     $addOptions = [];
                     $inputType = $this->processClassType($classType);
                     if ($classType == 'uri' && isset($value['type']) && is_array($value['type'])){
+                        $i = 0;
                         foreach ($value['type'] as $strType) {
                             if (isset($combinedTypes[$strType])){
-                                array_push($rdfType, $combinedTypes[$strType]);
+                                if ($i == 0){
+                                    $rdfType = $combinedTypes[$strType];
+                                } else {
+                                    $rdfType = '|'.$combinedTypes[$strType];
+                                }
+                                $i++;
                             }
                         }
                         if (empty($rdfType)){

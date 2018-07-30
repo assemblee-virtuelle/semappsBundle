@@ -18,7 +18,7 @@ use VirtualAssembly\SemanticFormsBundle\Form\SemanticFormType;
 use VirtualAssembly\SemanticFormsBundle\Form\UriType;
 use VirtualAssembly\SemanticFormsBundle\SemanticFormsBundle;
 
-class PersonType extends SemanticFormType
+class PersonType extends ComponentType
 {
 
     public function buildForm(FormBuilderInterface $builder, array $options)

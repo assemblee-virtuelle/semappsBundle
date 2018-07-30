@@ -54,7 +54,7 @@ abstract class AbstractComponentController extends Controller
         if ($componentName == 'person' || $componentName == 'organization'){
             $componentForm = $bundleName.'\Form\\'.ucfirst($componentName).'Type';
         } else {
-            $componentForm = $bundleName.'\Form\\'.'DefaultType';
+            $componentForm = $bundleName.'\Form\\'.'ComponentType';
         }
 
         //common

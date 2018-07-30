@@ -54,10 +54,9 @@
                         {% if form is not null %}
                             <a href="#" id="profilePicture" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="Cliquez ici pour télécharger une image (2Mo max !)">
                                 <img src="{{ asset(currentUser.pictureName == null ? 'common/images/no_avatar.png' : 'uploads/pictures/'~currentUser.pictureName) }}"/>
-                                <span id="profileEditPictureField">
-                                    
-                        {{ form_widget(form.pictureName) }}
-                    </span>
+                                <span id="profileEditPictureField"> 
+                                    {{ form_widget(form.pictureName) }}
+                                </span>
                             </a>
                         {% endif %}
                     </div>

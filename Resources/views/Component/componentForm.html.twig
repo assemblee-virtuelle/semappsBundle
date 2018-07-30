@@ -38,8 +38,22 @@
                     {% endif %}
 
                     {{ form_start(form) }}
-                    {% block formContent %}
-                    {% endblock %}
+                    <div class="col-sm-6">
+                        {% for field in form %}
+                        <div class="row">
+                            <div class="col-xs-6">
+                                {{ form_row(field) }}
+                            </div>
+                        </div>
+
+                        {% endfor %}
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                {{ form_row(form.save, {attr:{class:'btn btn-primary-lgv pull-right'}}) }}
+                            </div>
+                        </div>
+                    </div>
                     {{ form_end(form) }}
                     {% if importForm is not null %}
                 </div>
