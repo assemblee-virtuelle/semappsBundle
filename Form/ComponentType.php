@@ -61,8 +61,6 @@ class ComponentType extends SemanticFormType
                         if (empty($rdfType)){
                             $rdfType == null;
                         }
-                        print_r($rdfType);
-                        echo "<br>";
                         $addOptions = [
                             'required' => $value['form']['required'],
                             'rdfType' => $rdfType,
