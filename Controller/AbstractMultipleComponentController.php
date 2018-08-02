@@ -32,6 +32,7 @@ abstract class AbstractMultipleComponentController extends AbstractComponentCont
         //get the list of component
         $listContent = $this->componentList($componentConf,$graphURI);
 
+        //FIXME: fix bundle name (get @bundleName/Component...)
         $templateTwig = $bundleName.':Component:componentList.html.twig';
         //display
         return $this->render(

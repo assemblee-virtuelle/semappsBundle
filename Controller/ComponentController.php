@@ -126,7 +126,7 @@ class ComponentController extends AbstractMultipleComponentController
         if($this->container->get('twig.loader')->exists('semappsBundle:'.ucfirst($componentName).':'.$componentName.'Form.html.twig')){
             $templateTwig = 'semappsBundle:'.ucfirst($componentName).':'.$componentName.'Form.html.twig';
         }else{
-
+            //TODO: Remplacer semappsBundle par @bundleName 
             $templateTwig = 'semappsBundle:Component:componentForm.html.twig';
         }
         // Fill form

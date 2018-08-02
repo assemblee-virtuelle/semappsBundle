@@ -19,7 +19,7 @@ parameters:
           type: null
           form:
             required: true
-            languages:
+            languages: #Donner la variable de translation et le label par defaut plutot
               fr: 'Prénom'
               en: 'First name'
             classType: 'text'

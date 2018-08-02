@@ -1,0 +1,16 @@
+imports:
+    - { resource: "@semappsBundle/Resources/config/ontologyForms/personConf.yml" }
+    - { resource: "@semappsBundle/Resources/config/ontologyForms/organizationConf.yml" }
+    - { resource: "@semappsBundle/Resources/config/ontologyForms/organizationtypeConf.yml" }
+    - { resource: "@semappsBundle/Resources/config/ontologyForms/dbpedia.yml" }
+    - { resource: "@semappsBundle/Resources/config/ontologyForms/thematicConf.yml" }
+    
+
+parameters:
+  typeToName: #TODO: Enlever le typeToName
+    http://virtual-assembly.org/pair#Person: 'person'
+    http://virtual-assembly.org/pair#Organization: 'organization'
+
+  graphToName:
+    urn://semapps/thesaurus/organizationtype: 'organizationType'
+    http://assemblee-virtuelle.github.io/grands-voisins-v2/thesaurus.ttl: 'thematic'

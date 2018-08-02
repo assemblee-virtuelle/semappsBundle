@@ -81,14 +81,6 @@ class ComponentType extends SemanticFormType
                 }
             }
         }
-        $builder->add(
-            'pictureName',
-            FileType::class,
-            [
-                'data_class' => null,
-                'required'   => false,
-            ]
-        );
         $builder->add('save', SubmitType::class, ['label' => 'Enregistrer']);
         
     }
