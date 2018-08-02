@@ -33,7 +33,7 @@ class ComponentType extends SemanticFormType
 
         $this->default_types = $options['default_types'];
         $this->ontology_types = $options['ontology_types'];
-        
+
         $combinedTypes = array_merge($this->default_types, $this->ontology_types);
         foreach ($options['sfConf']['fields'] as $key => $value) {
             $rdfType = "";
@@ -82,7 +82,6 @@ class ComponentType extends SemanticFormType
             }
         }
         $builder->add('save', SubmitType::class, ['label' => 'Enregistrer']);
-        
     }
 
     public function configureOptions(OptionsResolver $resolver)

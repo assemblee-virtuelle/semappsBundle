@@ -26,6 +26,13 @@ class PersonType extends ComponentType
 
         // This will manage form specification.
         parent::buildForm($builder, $options);
-
+        $builder->add(
+            'pictureName',
+            FileType::class,
+            [
+                'data_class' => null,
+                'required'   => false,
+            ]
+        );
     }
 }
