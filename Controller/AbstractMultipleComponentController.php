@@ -31,7 +31,7 @@ abstract class AbstractMultipleComponentController extends AbstractComponentCont
 
         //get the list of component
         $listContent = $this->componentList($componentConf,$graphURI);
-        dump($bundleName);
+
         if($this->container->get('twig.loader')->exists('@'.$bundleName.'/'.ucfirst($componentName).'/'.$componentName.'List.html.twig')){
           $templateTwig = '@'.$bundleName.'/'.ucfirst($componentName).'/'.$componentName.'List.html.twig';
         }
