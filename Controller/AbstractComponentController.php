@@ -79,6 +79,7 @@ abstract class AbstractComponentController extends Controller
     protected function getBundleNameFromRequest($request){
       $re = '/[^\W_]+(?:[\'_-][^\W_]+)*?(?=Bundle)/';
       // return explode("\\Controller",$request->attributes->get('_controller'))[0];
+      preg_match_all($re, $request->attributes->get('_controller'), $matches, PREG_SET_ORDER, 0);
       return $matches[0][0];
     }
 }
