@@ -18,6 +18,7 @@ class ComponentController extends AbstractMultipleComponentController
      */
     public function addAction($componentName,$uri =null,Request $request)
     {
+        $bundleName = $this->getBundleNameFromRequest($request);
         $sparqlRepository   = $this->get('semapps_bundle.sparql_repository');
         $sfClient       = $this->get('semantic_forms.client');
         $componentConf = $this->getParameter($componentName.'Conf');
@@ -123,11 +124,13 @@ class ComponentController extends AbstractMultipleComponentController
                 }
             }
         }
-        if($this->container->get('twig.loader')->exists('semappsBundle:'.ucfirst($componentName).':'.$componentName.'Form.html.twig')){
-            $templateTwig = 'semappsBundle:'.ucfirst($componentName).':'.$componentName.'Form.html.twig';
+        if($this->container->get('twig.loader')->exists('@'.$bundleName.'/'.ucfirst($componentName).'/'.$componentName.'Form.html.twig')){
+          $templateTwig = '@'.$bundleName.'/'.ucfirst($componentName).'/'.$componentName.'Form.html.twig';
+        }
+        else if($this->container->get('twig.loader')->exists('@semapps/'.ucfirst($componentName).'/'.$componentName.'Form.html.twig')){
+          $templateTwig = '@semapps/'.ucfirst($componentName).'/'.$componentName.'Form.html.twig';
         }else{
-            //TODO: Remplacer semappsBundle par @bundleName 
-            $templateTwig = 'semappsBundle:Component:componentForm.html.twig';
+            $templateTwig = '@semapps/Component/componentForm.html.twig';
         }
         // Fill form
         return $this->render(

@@ -5,7 +5,7 @@ namespace VirtualAssembly\semappsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-
+use Symfony\Component\HttpFoundation\RequestStack;
 
 abstract class AbstractComponentController extends Controller
 {
@@ -50,11 +50,12 @@ abstract class AbstractComponentController extends Controller
             'ontology_types'        => $ontology_types
         ];
 
-        // Same as FormType::class
         if ($componentName == 'person' || $componentName == 'organization'){
-            $componentForm = $bundleName.'\Form\\'.ucfirst($componentName).'Type';
-        } else {
-            $componentForm = $bundleName.'\Form\\'.'ComponentType';
+          $componentForm = 'VirtualAssembly\semappsBundle\Form\\'.ucfirst($componentName).'Type';
+        } else if($bundleName = 'semapps'){
+          $componentForm = 'VirtualAssembly\semappsBundle\Form\ComponentType';
+        }else{
+          $componentForm = $bundleName.'Bundle\Form\\'.ucfirst($componentName).'Type';
         }
 
         //common
@@ -76,6 +77,11 @@ abstract class AbstractComponentController extends Controller
      * Récupère le nom du bundle dans la requête
      */
     protected function getBundleNameFromRequest($request){
-        return explode("\\Controller",$request->attributes->get('_controller'))[0];
+      $re = '/[^\W_]+(?:[\'_-][^\W_]+)*?(?=Bundle)/';
+      // return explode("\\Controller",$request->attributes->get('_controller'))[0];
+      dump($request->attributes->get('_controller'));
+      dump(preg_match_all($re, $request->attributes->get('_controller'), $matches, PREG_SET_ORDER, 0));
+      dump($matches);
+      return $matches[0][0];
     }
 }

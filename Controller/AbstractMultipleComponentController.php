@@ -31,9 +31,16 @@ abstract class AbstractMultipleComponentController extends AbstractComponentCont
 
         //get the list of component
         $listContent = $this->componentList($componentConf,$graphURI);
+        dump($bundleName);
+        if($this->container->get('twig.loader')->exists('@'.$bundleName.'/'.ucfirst($componentName).'/'.$componentName.'List.html.twig')){
+          $templateTwig = '@'.$bundleName.'/'.ucfirst($componentName).'/'.$componentName.'List.html.twig';
+        }
+        else if($this->container->get('twig.loader')->exists('@semapps/'.ucfirst($componentName).'/'.$componentName.'List.html.twig')){
+          $templateTwig = '@semapps/'.ucfirst($componentName).'/'.$componentName.'List.html.twig';
+        }else{
+            $templateTwig = '@semapps/Component/componentList.html.twig';
+        }
 
-        //FIXME: fix bundle name (get @bundleName/Component...)
-        $templateTwig = $bundleName.':Component:componentList.html.twig';
         //display
         return $this->render(
             $templateTwig,
@@ -64,7 +71,7 @@ abstract class AbstractMultipleComponentController extends AbstractComponentCont
         );
 
     }
-    
+
     function getSfLink($id = null)
     {
         return $this->sfLink;
