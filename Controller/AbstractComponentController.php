@@ -50,12 +50,10 @@ abstract class AbstractComponentController extends Controller
             'ontology_types'        => $ontology_types
         ];
 
-        if ($componentName == 'person' || $componentName == 'organization'){
+        if(array_key_exists($componentName,$default_types)){
           $componentForm = 'VirtualAssembly\semappsBundle\Form\\'.ucfirst($componentName).'Type';
-        } else if($bundleName = 'semapps'){
+        } else{
           $componentForm = 'VirtualAssembly\semappsBundle\Form\ComponentType';
-        }else{
-          $componentForm = $bundleName.'Bundle\Form\\'.ucfirst($componentName).'Type';
         }
 
         //common
