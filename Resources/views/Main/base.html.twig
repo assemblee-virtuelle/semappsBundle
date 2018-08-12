@@ -1,0 +1,26 @@
+{% extends "::base.html.twig" %}
+    {% block title %}SemApps  | Réseau{% endblock %}
+
+    {% block stylesheets %}
+    {{ parent() }}
+      <link rel="shortcut icon" href="{{ asset('common/images/favicon.png') }}" />
+      <!-- See https://goo.gl/OOhYW5 -->
+      <link rel="manifest" href="{{ asset('manifest.json') }}">
+
+      <link type="text/css" rel="stylesheet"
+            href="{{ asset('bundles/semapps/bower_components/bootstrap/dist/css/bootstrap.css') }}">
+      <link type="text/css" rel="stylesheet"
+            href="{{ asset('bundles/semapps/bower_components/bootstrap/dist/css/bootstrap-theme.css') }}">
+      <link href="https://fonts.googleapis.com/css?family=Crafty+Girls" rel="stylesheet">
+    {% endblock %}
+
+    {% block javascripts %}
+    {{ parent() }}
+        <script src="{{ asset('bundles/semapps/bower_components/jquery/dist/jquery.min.js') }}"></script>
+        <script src="{{ asset('bundles/semapps/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+    {% endblock %}
