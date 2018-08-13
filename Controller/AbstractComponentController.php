@@ -52,13 +52,14 @@ abstract class AbstractComponentController extends Controller
 
         if(array_key_exists($componentName,$default_types)){
           $componentForm = 'VirtualAssembly\semappsBundle\Form\\'.ucfirst($componentName).'Type';
+        }else if ($bundleName != 'semapps') {
+          $componentForm = $bundleName.'\Form\\'.ucfirst($componentName).'Type';
         } else{
           $componentForm = 'VirtualAssembly\semappsBundle\Form\ComponentType';
         }
 
         //common
         /** @var \VirtualAssembly\SemanticFormsBundle\Form\SemanticFormType $form */
-
         $form = $this->createForm(
             $componentForm,
             $this->getElement($id),
