@@ -51,9 +51,9 @@ class ComponentType extends SemanticFormType
                         foreach ($value['type'] as $strType) {
                             if (isset($combinedTypes[$strType])){
                                 if ($i == 0){
-                                    $rdfType = $combinedTypes[$strType];
+                                    $rdfType = $combinedTypes[$strType]['uri'];
                                 } else {
-                                    $rdfType = '|'.$combinedTypes[$strType];
+                                    $rdfType = '|'.$combinedTypes[$strType]['uri'];
                                 }
                                 $i++;
                             }
@@ -73,7 +73,7 @@ class ComponentType extends SemanticFormType
                         ];
                     }
                     $this->add(
-                        $builder, 
+                        $builder,
                         $name,
                         $inputType,
                         $addOptions

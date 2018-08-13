@@ -131,6 +131,7 @@
                                     {% endif %}
 
                                     {% if app.user.sfLink or context_manager.getContext(app.user.sfLink).contextName %}
+                                      {% for name,element in ontology_types %}
                                      {# admin.menuItem('Test', 'componentList', 'screenshot','Référencez vos projets ', menuSelected, 'MEMBER',{'componentName':'place'}) #}
                                      {{ admin.menuItem('Lieux', 'componentList', 'map-marker','Référencer des lieux', menuSelected, 'MEMBER',{'componentName':'place'}) }}
                                     {# TODO: set a foreach for type list
@@ -139,8 +140,11 @@
                                         {{ admin.menuItem('Document', 'componentList', 'folder-open','référencer des documents', menuSelected, 'MEMBER',{'componentName':'document'}) }}
                                         {{ admin.menuItem('Biens', 'componentList', 'gift','Référencer des biens', menuSelected, 'MEMBER',{'componentName':'good'}) }}
                                         {{ admin.menuItem('Services', 'componentList', 'wrench','Référencer des services', menuSelected, 'MEMBER',{'componentName':'service'}) }}
-                                        {{ admin.menuItem('Lieux', 'componentList', 'map-marker','Référencer des lieux', menuSelected, 'MEMBER',{'componentName':'place'}) }}
                                         #}
+                                        {% if element.route == "componentList" %}
+                                          {{ admin.menuItem(element.title, element.route, element.marker,element.tooltip, menuSelected, element.role ,{'componentName':name}) }}
+                                        {% endif %}
+                                      {% endfor %}
                                     {% endif %}
                                     {% if app.user.sfLink or context_manager.getContext(app.user.sfLink).contextName %}
                                     <li class="main">
